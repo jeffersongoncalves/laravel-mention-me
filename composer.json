@@ -3,7 +3,12 @@
     "description": "Mention Me referral marketing API integration for Laravel",
     "keywords": [
         "laravel",
-        "laravel-mention-me"
+        "mention-me",
+        "mentionme",
+        "referral",
+        "referral-marketing",
+        "api",
+        "client"
     ],
     "homepage": "https://github.com/jeffersongoncalves/laravel-mention-me",
     "license": "MIT",
@@ -15,8 +20,9 @@
     ],
     "require": {
         "php": "^8.2",
-        "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^12.0|^13.0"
+        "illuminate/http": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
         "larastan/larastan": "^3.0",
@@ -27,12 +33,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Jeffersongoncalves\\LaravelMentionMe\\": "src/"
+            "JeffersonGoncalves\\LaravelMentionMe\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Jeffersongoncalves\\LaravelMentionMe\\Tests\\": "tests/"
+            "JeffersonGoncalves\\LaravelMentionMe\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -52,10 +58,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jeffersongoncalves\\LaravelMentionMe\\LaravelMentionMeServiceProvider"
+                "JeffersonGoncalves\\LaravelMentionMe\\LaravelMentionMeServiceProvider"
             ],
             "aliases": {
-                "LaravelMentionMe": "Jeffersongoncalves\\LaravelMentionMe\\Facades\\LaravelMentionMe"
+                "MentionMe": "JeffersonGoncalves\\LaravelMentionMe\\Facades\\MentionMe"
             }
         }
     },

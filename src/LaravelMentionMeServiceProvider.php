@@ -1,6 +1,6 @@
 <?php
 
-namespace Jeffersongoncalves\LaravelMentionMe;
+namespace JeffersonGoncalves\LaravelMentionMe;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -10,9 +10,12 @@ class LaravelMentionMeServiceProvider extends PackageServiceProvider
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('laravel-mention-me')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigrations();
+            ->name('mention-me')
+            ->hasConfigFile();
+    }
+
+    public function packageRegistered(): void
+    {
+        $this->app->singleton(MentionMe::class);
     }
 }
